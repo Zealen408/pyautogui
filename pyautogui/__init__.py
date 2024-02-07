@@ -741,7 +741,7 @@ def _logScreenshot(logScreenshot, funcName, funcArgs, folder="."):
     filepath = os.path.join(folder, filename)
 
     # Delete the oldest screenshot if we've reached the maximum:
-    if (LOG_SCREENSHOTS_LIMIT is not None) and (len(G_LOG_SCREENSHOTS_FILENAMES) >= LOG_SCREENSHOTS_LIMIT):
+    if (LOG_SCREENSHOTS_LIMIT != None) and (len(G_LOG_SCREENSHOTS_FILENAMES) >= LOG_SCREENSHOTS_LIMIT):
         os.unlink(os.path.join(folder, G_LOG_SCREENSHOTS_FILENAMES[0]))
         del G_LOG_SCREENSHOTS_FILENAMES[0]
 
